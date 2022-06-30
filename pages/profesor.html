@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="myApp">        
+        <h2>Lista Reporte</h2>
+      <ul>
+        <li v-for="{nombre,apellido,materia, instruccion, numeroCursos} in lista">
+            <h4>{{nombre}} - {{apellido}} - {{materia}} - {{instruccion}} - 
+            {{numeroCursos}}</h4>
+            <hr>
+        </li>
+      </ul>
+      <button v-on:click="agregarProfesor">Agregar Profesor</button>
+    </div>
+
+    <script src="../js/profesor.js"></script>
+</body>
+</html>
