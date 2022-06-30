@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Datos</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    
+</head> 
+<body>
+    <div id ="myApp">
+        <h4>Pagina VueJS</h4>
+        <h3>Mis primeros pasos con Vue.js</h3>
+        <h2>{{mensaje}}</h2>
+        <h2>{{mensaje1}}</h2>
+
+        <button v-on:click ="cambiarMensaje">Cambiar Mensaje</button>
+        <button v-on:click ="cambiarMensajeMayuscula">Cambiar Mensaje Mayúscula</button>
+        <button v-on:click ="cambiarTodo">Cambiar Todo</button>
+    </div>
+
+
+    <script src="../js/datos.js"></script>
+
+  </body>
+</body>
+</html>
