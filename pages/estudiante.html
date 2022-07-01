@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Estudiantes</title>
     <script src="https://unpkg.com/vue@3"></script>
   </head>
   <body>
@@ -56,12 +56,18 @@
 
       <h2>Lista Reporte</h2>
       <ul>
-        <li v-for="{nombre,apellido,edad} in lista">
-            <h3>{{nombre}} - {{apellido}} - {{edad}}</h3>
+        <li v-for="(item,index) in lista">
+            <h3>{{index+1}}: {{item.nombre}} - {{item.apellido}} - {{item.edad}}</h3>
         </li>
       </ul>
-      <button v-on:click="agregarEstudiante">Agregar Estudiante</button>
+      <h2>Lista Reporte</h2>
+      <ul>
+        <li v-for="({nombre,apellido,edad},index) in lista">
+            <h3>{{index+1}}: {{nombre}} - {{apellido}} - {{edad}}</h3>
+        </li>
+      </ul>
 
+      <button v-on:click="agregarEstudiante">Agregar Estudiante</button>
     </div>
 
     <script src="../js/estudiante.js"></script>

@@ -4,7 +4,7 @@ const lista = [
   { nombre: "Juanito", apellido: "Montalvo", edad: 24 },
   { nombre: "Andrea", apellido: "Andrade", edad: 21 },
   { nombre: "Daniela", apellido: "Madera", edad: 31 },
-  { nombre: "Eduardo", apellido: "Arteaga", edad: 15 },
+  { nombre: "Eduardo", apellido: "Arteaga", edad: 15 }
 ];
 
 const app = Vue.createApp({
