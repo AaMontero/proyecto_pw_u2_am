@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        label{
+            display:block;
+        }
+        button{
+            margin-left:15px; 
+        }
+    </style>
+
+</head>
+<body>
+    <div id="myApp">
+        <h2>Ingreso de Tareas</h2>
+        <label for="tarea">Tarea: </label>
+        <input type="text" v-model="tarea" name="tarea">
+        <label for="horaInicio">Hora Inicio: </label>
+        <input type="text" v-model="horaInicio" name ="horaInicio">
+        <label for="horaFin">Hora Fin: </label>
+        <input type="text" v-model="horaFin" name="horaFin">
+        <p> La tarea que va a agregar es: {{tarea}} {{horaInicio}} {{horaFin}}</p>
+        <button v-on:click="agregarTarea('I')">Agregar Inicio</button>
+        <button v-on:click="agregarTarea('F')">Agregar Fin</button>
+        <ul>
+            <li v-for="({tarea,horaInicio,horaFin},index) in TareasLista">
+                <h4>{{index+1}}: {{tarea}} - {{horaInicio}} - {{horaFin}}</h4>
+                <hr>
+            </li>
+          </ul>
+    </div>
+    <script src="../js/TareasLista.js"></script>
+</body>
+</html>
